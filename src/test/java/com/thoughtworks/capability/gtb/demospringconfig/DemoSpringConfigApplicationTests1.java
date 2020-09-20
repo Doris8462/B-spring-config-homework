@@ -7,15 +7,15 @@ import org.springframework.test.context.TestPropertySource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 @SpringBootTest
-@TestPropertySource(properties = {"levelNumber=0"})
-class DemoSpringConfigApplicationTests {
+@TestPropertySource(properties = {"levelNumber=1"})
+class DemoSpringConfigApplicationTests1 {
     @Autowired
     private LevelController levelController;
 
     @Test
     void contextLoads() {
-        assertEquals("basic", levelController.getLevel());
+        assertEquals("advanced", levelController.getLevel());
     }
 }
+
