@@ -8,13 +8,14 @@ import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class DemoSpringConfigApplicationTests {
-	@Autowired
-	private LevelController levelController;
+@ActiveProfiles("2")
+class DemoSpringConfigApplicationTests2 {
+    @Autowired
+    private LevelController levelController;
 
-	@Test
-	void contextLoads() {
-		assertEquals("basic",levelController.getLevel());
-	}
+    @Test
+    void contextLoads() {
+        assertEquals("advanced",levelController.getLevel());
+    }
 
 }
